@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Krona One' rel='stylesheet'>
+    <title>Kroma Resume Builder</title>
+</head>
+<body>
+    <!-- background -->
+    <img id="coverMain" src="./gallery/bg color shadows.png" alt="background">
+    
+    <!-- navbar -->
+    <div class='Navbar'>
+        <div class='logo'>
+           <a href="/"> Kroma Resume </a>
+        </div>
+          <ul class='NavList'>
+              <li class='listItem'><a href='/'>Home</a></li>
+              <li class='listItem'><a href='/'>Services</a></li>
+              <li class='listItem'><a href='/blogs.html'>Blogs</a></li>
+              <li class='listItem'><a href='/aboutUs.html'>About Us</a></li>
+              <li class='listItem'><a href='/templates.html'>Templates</a></li>
+          </ul>
+        <div class='ContactUs'>
+            Contact Us
+        </div>
+      </div>
+      
+      <!-- Hero Section -->
+      <div id='main'>
+          <div id='headings'>
+            <h1 id='mainHeading'>
+                Create a Powerful Resume for <br/><span>Your Portfolio</span><br/>with amazing templates.
+            </h1>
+            <p id='mainPara'>
+            We are on mission to help businesses to get online effectively with Best Web Dev Services at the Most Affordable Prices.
+            </p>
+            <div id='buttons'>
+                <div class='button' id='button1'>
+                    <a href="/templates.html">
+                        Explore Templates
+                    </a>
+                </div>
+                <div class='button' id='button2'>
+                    <a href="/aboutUs.html">
+                        About Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id='image'>
+            <img id='imgsrc' src = './gallery/lady.png' alt='lady'/>
+        </div>
+    </div>
+    
+
+    <!-- infinite Scroll -->
+    <div class="carousel">
+        <div class="images">
+            <a href="/input.html">
+                <img class = "poster" src="./gallery/resume.png" alt="movies">
+            </a>
+            <a href="/input.html">
+                <img class = "poster" src="./gallery/resume2.jpeg" alt="movies">
+            </a>
+            <a href="/input.html">
+                <img class = "poster" src="./gallery/resume3.jpeg" alt="movies">
+            </a>
+            <a href="/input.html">
+                <img class = "poster" src="./gallery/resume4.jpeg" alt="movies">
+            </a>
+            <a href="/input.html">
+                <img class = "poster" src="./gallery/resume5.jpeg" alt="movies">
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script>
+
+    const carousels = document.querySelectorAll(".carousel");
+    carousels.forEach(carousel => {
+        const carouselInner = carousel.querySelector(".images");
+        const carouselContent = Array.from(carouselInner.children);
+        carouselContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            carouselInner.appendChild(duplicatedItem);
+            carouselInner.style.animation = "move 10s linear infinite";
+
+        })
+    });
+
+</script>
+</html>

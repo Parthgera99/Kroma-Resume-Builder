@@ -1,0 +1,104 @@
+/* coloured background */
+body{
+    background-color: #3a3a3a;
+    color: white;
+    font-family: Montserrat;
+}
+#coverMain{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    max-width: 100%;
+}
+
+#bgcolour{
+    position: absolute;
+    top: 0;
+}
+
+/* navbar */
+
+.Navbar{
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    /* margin: 1vw 5vw 2vw 5vw ; */
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin: 0 1vw;
+}
+.NavList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1vw;
+    padding: 0;
+}
+.listItem{
+    cursor: pointer;
+    margin: 0 1vw 0 0;
+    list-style: none;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    border-radius: 1vw;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.listItem:hover{
+    background-color: #e07800;
+    transition: 0.5s;
+}
+
+.listItem:not(:hover){
+    transition: 0.5s;
+}
+
+.logo{
+
+    cursor: pointer;
+    margin: 1vw 0;
+    padding: 1vw 0;
+    font-family: Montserrat;
+}
+
+.logo:hover{
+    -webkit-transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.logo:not(:hover){
+    transition : 0.5s;
+}
+
+.ContactUs{
+    font-family: Montserrat;
+    cursor: pointer;
+    /* margin: 0 10vw 0 0; */
+    width: 10vw;
+    text-align: center;
+    background-color: #ff9e02;
+    padding: 0.5vw 1.6vw 0.7vw 1.6vw;
+    align-items: center;
+    border-radius: 1.2vw;
+    color: white;
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+
+.ContactUs:hover{
+    background-color: #e07800;
+    transition: 0.5s ;
+}
+.ContactUs:not(:hover){ 
+    transition: 0.5s ;
+}
+
+h1{
+    text-align: center;
+    margin-top: 3vw;
+}

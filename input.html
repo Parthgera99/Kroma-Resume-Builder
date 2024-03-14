@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="/input.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Krona One' rel='stylesheet'>
+<title>Resume Form</title>
+<style>
+        /* coloured background */
+    body{
+        background-color: #3a3a3a;
+        color: white;
+        font-family: Montserrat;
+    }
+    #coverMain{
+        position: fixed;
+        top: 0;
+        z-index: -1;
+        max-width: 100%;
+    }
+
+    #bgcolour{
+        position: absolute;
+        top: 0;
+    }
+
+    /* navbar */
+
+    .Navbar{
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        /* margin: 1vw 5vw 2vw 5vw ; */
+        color: white;
+        font-size: 1.5vw;
+        font-weight: 500;
+        margin: 0 1vw;
+    }
+    .NavList{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 1vw;
+        padding: 0;
+    }
+    .listItem{
+        cursor: pointer;
+        margin: 0 1vw 0 0;
+        list-style: none;
+        padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+        border-radius: 1vw;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .listItem:hover{
+        background-color: #e07800;
+        transition: 0.5s;
+    }
+
+    .listItem:not(:hover){
+        transition: 0.5s;
+    }
+
+    .logo{
+
+        cursor: pointer;
+        margin: 1vw 0;
+        padding: 1vw 0;
+        font-family: Montserrat;
+    }
+
+    .logo:hover{
+        -webkit-transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+    .logo:not(:hover){
+        transition : 0.5s;
+    }
+
+    .ContactUs{
+        font-family: Montserrat;
+        cursor: pointer;
+        /* margin: 0 10vw 0 0; */
+        width: 10vw;
+        text-align: center;
+        background-color: #ff9e02;
+        padding: 0.5vw 1.6vw 0.7vw 1.6vw;
+        align-items: center;
+        border-radius: 1.2vw;
+        color: white;
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .ContactUs:hover{
+        background-color: #e07800;
+        transition: 0.5s ;
+    }
+    .ContactUs:not(:hover){ 
+        transition: 0.5s ;
+    }
+
+  /* input  */
+
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #ff9e02;
+    font-family: Montserrat;
+  }
+  h2{
+      text-align: center;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-group button {
+    width: 40%;
+    padding: 10px;
+    margin-inline: auto;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
+  .form-group button:hover {
+    background-color: #4cae4c;
+  }
+  #submitbtn{
+    margin-top: 2vw;
+    text-align: center;
+  }
+  .addMoreBtn{
+    text-align: center;
+    width: 40%;
+    padding: 10px;
+    margin-inline: auto;
+    background-color: #e09600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+    <!-- background -->
+    <img id="coverMain" src="./gallery/bg color shadows.png" alt="background">
+
+    <!-- navbar -->
+    <div class='Navbar'>
+        <div class='logo'>
+            <a href="/"> Kroma Resume </a>
+        </div>
+          <ul class='NavList'>
+            <li class='listItem'><a href='/'>Home</a></li>
+            <li class='listItem'><a href='/'>Services</a></li>
+            <li class='listItem'><a href='/blogs.html'>Blogs</a></li>
+            <li class='listItem'><a href='/aboutUs.html'>About Us</a></li>
+            <li class='listItem'><a href='/templates.html'>Templates</a></li>
+          </ul>
+        <div class='ContactUs'>
+            Contact Us
+        </div>
+      </div>
+
+      <!-- input  -->
+
+    <div class="container">
+    <h1>Resume Information Form</h1>
+    <form >
+
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+        <label for="profession">Profession</label>
+        <input type="text" id="profession" name="profession" required>
+        </div>
+
+        <div class="form-group">
+        <label for="about">About Me</label>
+        <textarea id="about" name="about" rows="4" required></textarea>
+        </div>
+
+        <!-- Repeat this job experience section for each job -->
+        <div class="form-group">
+            <h2>Job Experience</h2>
+            <label for="position">Position</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="timePeriod">Time Period</label>
+            <input type="text" id="timePeriod" name="timePeriod" required>
+
+            <label for="jobDescription">Description</label>
+            <textarea id="jobDescription" name="jobDescription" rows="3" required></textarea>
+        </div>
+
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <!-- Contact Information -->
+        <div class="form-group">
+        <h2>Contact Me</h2>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="website">Personal Website</label>
+        <input type="url" id="website" name="website">
+        </div>
+
+        <!-- Education Section -->
+        <!-- Repeat this section for each educational attainment -->
+        <div class="form-group">
+        <h2>Education</h2>
+        <label for="institution">Institution</label>
+        <input type="text" id="institution" name="institution" required>
+
+        <label for="degree">Degree</label>
+        <input type="text" id="degree" name="degree" required>
+
+        <label for="yearsAttended">Years Attended</label>
+        <input type="text" id="yearsAttended" name="yearsAttended" required>
+        </div>
+
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <!-- Skills Section -->
+        <!-- You can turn this into a repeatable section if multiple skills will be added -->
+        <div class="form-group">
+        <h2>Skills</h2>
+        <label for="skill">Skill</label>
+        <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <!-- Languages Section -->
+        <div class="form-group">
+        <h2>Languages</h2>
+        <label for="languages">Languages</label>
+        <input type="text" id="languages" name="languages" required>
+        </div>
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="form-group">
+        <h2>Hobbies</h2>
+        <label for="hobbies">Hobbies</label>
+        <input type="text" id="hobbies" name="hobbies" required>
+        </div>
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <!-- References Section -->
+        <!-- Repeat this section for each reference -->
+        <div class="form-group">
+        <h2>References</h2>
+        <label for="referenceName">Reference Name</label>
+        <input type="text" id="referenceName" name="referenceName" required>
+
+        <label for="referenceCompany">Company/Organization</label>
+        <input type="text" id="referenceCompany" name="referenceCompany" required>
+
+        <label for="referenceEmail">Email</label>
+        <input type="email" id="referenceEmail" name="referenceEmail" required>
+
+        <label for="referencePhone">Phone</label>
+        <input type="tel" id="referencePhone" name="referencePhone" required>
+        </div>
+
+        <div class="addMoreBtn">
+            Add More +
+        </div>
+
+        <div class="form-group" id="submitbtn">
+            <button onclick="collectFormData(event)" >Submit Resume</button>
+        </div>
+
+    </form>
+    </div>
+
+</body>
+</html>
